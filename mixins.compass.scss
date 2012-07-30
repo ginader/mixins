@@ -1,0 +1,41 @@
+// these mixins require compass to work 
+@import "compass";
+
+/** 
+retinafy one background image
+**/
+@mixin retina-icon($file){
+	@include background( inline-image($file) );
+	background-size: image-width($file)/2 auto;
+	background-repeat: no-repeat;
+}
+
+/** 
+retinafy two background images
+**/
+@mixin retina-icons($file1, $file2){
+	@include background( inline-image($file1), inline-image($file2) );
+	background-size: image-width($file1)/2 auto, image-width($file2)/2 auto;
+	background-repeat: no-repeat, no-repeat;
+}
+
+/** 
+retinafy one background image and pass a background property (i.e. a background color)
+**/
+@mixin retina-icon-and-background-prop($file, $background-prop){
+	@include background( inline-image($file) $background-prop );
+	background-size: image-width($file)/2 auto;
+	background-repeat: no-repeat;
+}
+
+/** 
+retinafy one background image on top of a linear gradient
+**/
+@mixin retina-icon-and-gradient($file, $start, $end) {
+	@include background(
+		inline-image($file),
+		linear-gradient($start, $end)
+	);
+	background-size: image-width($file)/2 auto, auto;
+	background-repeat: no-repeat;	
+}
