@@ -1,0 +1,11 @@
+@import "mixins.scss";
+
+.ellipsis-test-base{
+	@include ellipsis;
+}
+.ellipsis-test-1line{
+	@include ellipsis(1);
+}
+.ellipsis-test-2line{
+	@include ellipsis(2);
+}

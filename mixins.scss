@@ -1,0 +1,13 @@
+/** 
+visually truncate Strings and ends them with ...
+webkit is the only one which is able to do that for multi-line strings
+**/
+@mixin ellipsis ($lines: 1){
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $lines;
+	-webkit-box-orient: vertical;
+	word-break: break-word;
+	@if $lines == 1 {white-space: nowrap;}
+}
