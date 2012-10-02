@@ -1,0 +1,67 @@
+/** 
+the mixins in this file require Sass 3.2 please make sure you update
+**/
+
+/*
+// use like:
+@include keyframes(slide-down) {
+  0%, 100% { opacity: 1; }
+  10%, 90% { opacity: 0; }
+}
+*/
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+
+  @-o-keyframes $animation-name {
+    @content;
+  }
+
+  @-ms-keyframes $animation-name {
+    @content;
+  }
+
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+/*
+// use like:
+@include animation-name(slide-down);
+*/
+@mixin animation-name($name){
+	-webkit-animation-name: $name;
+	-moz-animation-name: $name;
+	-ms-animation-name: $name;
+	-o-animation-name: $name;
+	animation-name: $name;
+}
+
+/*
+@include animation-fill-mode(1s);
+*/
+@mixin animation-duration($duration){
+  	-webkit-animation-duration: $duration;
+  	-moz-animation-duration: $duration;
+	-ms-animation-duration: $name;
+  	-o-animation-duration: $duration;
+  	animation-duration: $duration;
+}
+
+/*
+@include animation-fill-mode(both);
+*/
+@mixin animation-fill-mode($fill-mode){
+  	-webkit-animation-fill-mode: $fill-mode;
+  	-moz-animation-fill-mode: $fill-mode;
+  	-ms-animation-fill-mode: $fill-mode;
+  	-o-animation-fill-mode: $fill-mode;
+  	animation-fill-mode: $fill-mode;
+}
+
