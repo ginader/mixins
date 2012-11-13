@@ -11,3 +11,20 @@ webkit is the only one which is able to do that for multi-line strings
 	word-break: break-word;
 	@if $lines == 1 {white-space: nowrap;}
 }
+
+
+/**
+set color of the HTML5 Placeholder Attribute
+**/
+@mixin input-placeholder($color){
+	::-webkit-input-placeholder, // webkit
+	:-moz-placeholder, // Firefox
+	:-ms-input-placeholder // Internet Explorer
+	{
+		color: $color;
+	}
+	// placeholder polyfill https://github.com/ginader/HTML5-placeholder-polyfill
+	.placeholder{
+		color: $color;
+	}
+}

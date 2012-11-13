@@ -9,3 +9,7 @@
 .ellipsis-test-2line{
 	@include ellipsis(2);
 }
+
+form{
+	@include input-placeholder(#999);
+}

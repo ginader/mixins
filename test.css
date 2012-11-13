@@ -2,6 +2,9 @@
 visually truncate Strings and ends them with ...
 webkit is the only one which is able to do that for multi-line strings
 **/
+/**
+set color of the HTML5 Placeholder Attribute
+**/
 .ellipsis-test-base {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -29,4 +32,13 @@ webkit is the only one which is able to do that for multi-line strings
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   word-break: break-word;
+}
+
+form ::-webkit-input-placeholder,
+form :-moz-placeholder,
+form :-ms-input-placeholder {
+  color: #999999;
+}
+form .placeholder {
+  color: #999999;
 }
